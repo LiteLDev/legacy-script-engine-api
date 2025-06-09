@@ -22,6 +22,26 @@ declare class SimpleForm {
    * @returns SimpleForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
   addButton(text: string, image?: string): SimpleForm
+
+  /**
+   * 向表单内增加标头
+   * @param text 标头内容
+   * @returns SimpleForm 处理完毕的表单对象（便于连锁进行其他操作）
+   */
+  addHeader(text: string): SimpleForm
+
+  /**
+   * 向表单内增加一行文本
+   * @param text 一行文本
+   * @returns SimpleForm 处理完毕的表单对象（便于连锁进行其他操作）
+   */
+  addLabel(text: string): SimpleForm
+
+  /**
+   * 向表单内增加分隔线
+   * @returns SimpleForm 处理完毕的表单对象（便于连锁进行其他操作）
+   */
+  addDivider(): SimpleForm
 }
 
 declare class CustomForm {
@@ -32,6 +52,12 @@ declare class CustomForm {
    */
   setTitle(title: string): CustomForm
 
+  /** 向表单内增加标头
+   * @param text 标头内容
+   * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
+   */
+  addHeader(text): CustomForm
+
   /**
    * 向表单内增加一行文本
    * @param text 一行文本
@@ -39,31 +65,39 @@ declare class CustomForm {
    */
   addLabel(text: string): CustomForm
 
+  /** 向表单内增加分割线
+   * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
+   */
+  addDivider(): CustomForm
+
   /**
    * 向表单内增加一行输入框
    * @param title 输入框描述文本
    * @param placeholder （可选参数）输入框内的提示字符
    * @param _default （可选参数）输入框中默认存在的内容
+   * @param tooltip （可选参数）提示文本
    * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
-  addInput(title: string, placeholder?: string, _default?: string): CustomForm
+  addInput(title: string, placeholder?: string, _default?: string, tooltip?: string): CustomForm
 
   /**
    * 向表单内增加一行开关选项
    * @param title 开关选项描述文本
    * @param _default （可选参数）开关的默认状态 开 / 关
+   * @param tooltip （可选参数）提示文本
    * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
-  addSwitch(title: string, _default?: boolean): CustomForm
+  addSwitch(title: string, _default?: boolean, tooltip?: string): CustomForm
 
   /**
    * 向表单内增加一行下拉菜单
    * @param title 下拉菜单描述文本
    * @param items 下拉菜单中的选项文本列表
    * @param _default （可选参数）下拉菜单默认选中的列表项序号。
+   * @param tooltip （可选参数）提示文本
    * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
-  addDropdown(title: string, items: string[], _default?: number): CustomForm
+  addDropdown(title: string, items: string[], _default?: number, tooltip?: string): CustomForm
 
   /**
    * 向表单内增加一行游标滑块
@@ -72,6 +106,7 @@ declare class CustomForm {
    * @param max 游标滑块最大值
    * @param step （可选参数）游标滑块调整的最小分度值，默认为1
    * @param _default （可选参数）游标滑块默认初始格数，数值必须在最小和最大格数之间。
+   * @param tooltip （可选参数）提示文本
    * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
   addSlider(
@@ -80,6 +115,7 @@ declare class CustomForm {
     max: number,
     step?: number,
     _default?: number,
+    tooltip?: string,
   ): CustomForm
 
   /**
@@ -87,8 +123,17 @@ declare class CustomForm {
    * @param title 步进滑块描述文本
    * @param items 步进滑块的选项文本列表
    * @param _default （可选参数）步进滑块默认初始选项。序号从0开始编号
+   * @param tooltip （可选参数）提示文本
+   * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
-  addStepSlider(title: string, items: string[], _default?: number): CustomForm
+  addStepSlider(title: string, items: string[], _default?: number, tooltip?: string): CustomForm
+
+  /**
+   * 设置提交按钮的文本
+   * @param text 提交按钮的文本
+   * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
+   */
+  setSubmitButton(text: string): CustomForm
 }
 
 declare namespace mc {
@@ -100,9 +145,10 @@ declare namespace mc {
 
   /**
    * 创建表单对象
-   * @returns CustomeForm 新创建的空白表单对象
+   * @returns CustomForm 新创建的空白表单对象
    */
   function newCustomForm(): CustomForm
 }
+
 declare class LLSE_SimpleForm extends SimpleForm {}
 declare class LLSE_CustomForm extends CustomForm {}

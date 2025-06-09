@@ -1,6 +1,6 @@
 {
   "name": "@levimc-lse/types",
-  "version": "2.16.1",
+  "version": "2.16.2",
   "description": "TypeScript declaration files for the Legacy Script Engine.",
   "types": "src/index.d.ts",
   "files": [

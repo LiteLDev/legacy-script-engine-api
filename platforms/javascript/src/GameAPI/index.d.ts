@@ -1,4 +1,3 @@
-/// <reference path="enums/index.d.ts" />
 /// <reference path="Basic/index.d.ts" />
 /// <reference path="Block/index.d.ts" />
 /// <reference path="BlockEntity/index.d.ts" />

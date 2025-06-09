@@ -916,7 +916,7 @@ declare class Player {
    */
   setTitle(
     content: string,
-    type?: Title,
+    type?: TitleType,
     fadeInTime?: number,
     stayTime?: number,
     fadeOutTime?: number,

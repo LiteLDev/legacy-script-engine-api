@@ -1,1 +1,1 @@
-/// <reference path="Title.d.ts" />
+/// <reference path="TitleType.d.ts" />

@@ -1,4 +1,4 @@
-declare enum Title {
+declare enum TitleType {
     /**
      * @description 清空
      */

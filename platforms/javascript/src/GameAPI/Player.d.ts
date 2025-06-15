@@ -863,33 +863,23 @@ declare class Player {
   ): number | null
 
   /**
-   * 发送SimpleForm表单
+   * 发送 SimpleForm 表单
    * @param fm 配置好的表单对象
    * @param callback 玩家与表单元素互动之后被调用的回调函数。
    */
   sendForm(
     fm: SimpleForm,
-    callback: (player: Player, id: number | null) => void,
+    callback: (player: Player, id: number | undefined) => void,
   ): number | null
 
   /**
-   * 发送CustomForm表单
+   * 发送 CustomForm 表单
    * @param fm 配置好的表单对象
    * @param callback 玩家与表单元素互动之后被调用的回调函数。
    */
   sendForm(
     fm: CustomForm,
-    callback: (player: Player, data: any[] | null) => void,
-  ): number | null
-
-  /**
-   * 发送表单
-   * @param fm 配置好的表单对象
-   * @param callback 玩家与表单元素互动之后被调用的回调函数。
-   */
-  sendForm(
-    fm: CustomForm | SimpleForm,
-    callback: (player: Player, data: number | any[] | null) => void,
+    callback: (player: Player, data: (undefined | string | number | boolean)[] | undefined) => void,
   ): number | null
 
   /**

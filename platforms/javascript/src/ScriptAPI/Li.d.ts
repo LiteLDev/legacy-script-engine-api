@@ -91,6 +91,11 @@ declare namespace ll {
   function getPluginInfo(name: string): Plugin
 
   /**
+   * 获取当前插件的信息
+   */
+  function getCurrentPluginInfo(): Plugin
+
+  /**
    * 列出所有已加载的插件
    * @returns 列出所有已加载的插件
    */

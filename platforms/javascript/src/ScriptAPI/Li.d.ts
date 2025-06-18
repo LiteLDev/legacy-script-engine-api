@@ -63,6 +63,9 @@ declare namespace ll {
   /** 当前版本是否为发布版本 */
   const isRelease: boolean
 
+  /** LeviLamina 插件的根目录 */
+  const pluginsRoot: string
+
   /**
    * 获取 LiteLoader 加载器版本
    * @returns 加载器版本对象

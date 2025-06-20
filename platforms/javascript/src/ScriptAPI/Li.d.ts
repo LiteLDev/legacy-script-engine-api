@@ -63,6 +63,9 @@ declare namespace ll {
   /** 当前版本是否为发布版本 */
   const isRelease: boolean
 
+  /** LeviLamina 插件的根目录 */
+  const pluginsRoot: string
+
   /**
    * 获取 LiteLoader 加载器版本
    * @returns 加载器版本对象
@@ -89,6 +92,11 @@ declare namespace ll {
    * @param name 插件名称
    */
   function getPluginInfo(name: string): Plugin
+
+  /**
+   * 获取当前插件的信息
+   */
+  function getCurrentPluginInfo(): Plugin
 
   /**
    * 列出所有已加载的插件

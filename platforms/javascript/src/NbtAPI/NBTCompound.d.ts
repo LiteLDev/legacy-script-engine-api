@@ -41,7 +41,7 @@ declare class NbtCompound {
    * @param key 要操作的键名
    * @returns NbtObject|Null 键对应的NBT对象
    */
-  getTag(key: string): NbtType | null
+  getTag(key: string): NbtByte | NbtShort | NbtInt | NbtLong | NbtFloat | NbtDouble | NbtByteArray | NbtString | NbtList | NbtCompound | null
 
   /**
    * 删除键对应的 NBT 对象

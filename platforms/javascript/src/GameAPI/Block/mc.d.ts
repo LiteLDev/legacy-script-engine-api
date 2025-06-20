@@ -36,15 +36,13 @@ declare namespace mc {
    * 通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 `/setblock`
    *
    * @param pos 目标方块位置
-   * @param block 要设置成的方块对象、方块标准类型名（如`minecraft:stone`）或方块NBT数据
-   * @param tileData 方块状态值，同原版 `/setBlock` 指令的 `tiledata`，默认为`0`，仅通过方块类型名放置方块时有效
+   * @param blockObject 要设置成的方块对象或方块 NBT 数据
    *
    * @returns 是否成功设置
    */
   function setBlock(
-    pos: IntPos,
-    block: Block | string | NbtCompound,
-    tileData: number,
+    pos: IntPos | FloatPos,
+    blockObject: Block | NbtCompound
   ): boolean
 
   /**
@@ -52,12 +50,28 @@ declare namespace mc {
    *
    * 通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 `/setblock`
    *
-   * @param x 方块x坐标
-   * @param y 方块y坐标
-   * @param z 方块z坐标
+   * @param pos 目标方块位置
+   * @param blockString 方块标准类型名（如`minecraft:stone`）
+   * @param tileData 方块状态值，同原版 `/setBlock` 指令的 `tileData`，默认为 `0`，仅通过方块类型名放置方块时有效
+   *
+   * @returns 是否成功设置
+   */
+  function setBlock(
+    pos: IntPos | FloatPos,
+    blockString: string,
+    tileData: number
+  ): boolean
+
+  /**
+   * ### 设置指定位置的方块
+   *
+   * 通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 `/setblock`
+   *
+   * @param x 方块 x 坐标
+   * @param y 方块 y 坐标
+   * @param z 方块 z 坐标
    * @param dimId 方块维度
-   * @param block 要设置成的方块对象、方块标准类型名（如`minecraft:stone`）或方块NBT数据
-   * @param tileData 方块状态值，同原版 `/setBlock` 指令的 `tiledata`，默认为`0`，仅通过方块类型名放置方块时有效
+   * @param blockObject 要设置成的方块对象或方块 NBT 数据
    *
    * @returns 是否成功设置
    */
@@ -66,8 +80,30 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-    block: Block | string | NbtCompound,
-    tileData: number,
+    blockObject: Block | NbtCompound
+  ): boolean
+
+  /**
+   * ### 设置指定位置的方块
+   *
+   * 通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 `/setblock`
+   *
+   * @param x 方块 x 坐标
+   * @param y 方块 y 坐标
+   * @param z 方块 z 坐标
+   * @param dimId 方块维度
+   * @param blockString 方块标准类型名（如`minecraft:stone`）
+   * @tileData 方块状态值，同原版 `/setBlock` 指令的 `tileData`，默认为 `0`，仅通过方块类型名放置方块时有效
+   *
+   * @returns 是否成功设置
+   */
+  function setBlock(
+    x: number,
+    y: number,
+    z: number,
+    dimId: 0 | 1 | 2,
+    blockString: string,
+    tileData: number
   ): boolean
 
   /**

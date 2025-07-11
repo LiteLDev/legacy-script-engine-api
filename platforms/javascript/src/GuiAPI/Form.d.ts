@@ -56,7 +56,7 @@ declare class CustomForm {
    * @param text 标头内容
    * @returns CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
    */
-  addHeader(text): CustomForm
+  addHeader(text: string): CustomForm
 
   /**
    * 向表单内增加一行文本

@@ -110,7 +110,7 @@ declare namespace mc {
     event: 'onMobHurt',
     listener: (
       mob: Entity,
-      source: Entity | null,
+      source: Entity | undefined,
       damage: number,
       cause: DamageCause | number,
     ) => boolean | void,
@@ -158,7 +158,7 @@ declare namespace mc {
    */
   function listen(
     event: 'onMobSpawned',
-    listener: (entity: Entity | null, pos: FloatPos) => void,
+    listener: (entity: Entity | undefined, pos: FloatPos) => void,
   ): boolean
 
   /** 实体被弹射物击中 */

@@ -16,9 +16,9 @@ declare namespace mc {
    * @param name 生物的命名空间名称，如 `minectaft:creeper`
    * @param pos 生成生物的位置的坐标对象
    *
-   * @returns 生成的实体对象（失败返回`null`）
+   * @returns 生成的实体对象（失败返回`undefined`）
    */
-  function spawnMob(name: string, pos: IntPos | FloatPos): Entity | null
+  function spawnMob(name: string, pos: IntPos | FloatPos): Entity | undefined
 
   /**
    * ### 生成新生物并获取
@@ -31,7 +31,7 @@ declare namespace mc {
    * @param z z坐标
    * @param dimId 维度Id
    *
-   * @returns 生成的实体对象（失败返回`null`）
+   * @returns 生成的实体对象（失败返回`undefined`）
    */
   function spawnMob(
     name: string,
@@ -39,7 +39,7 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-  ): Entity | null
+  ): Entity | undefined
 
   /**
    * ### 复制生物并获取
@@ -47,9 +47,9 @@ declare namespace mc {
    * @param entity 需要复制的实体对象
    * @param pos 生成生物的位置的坐标对象
    *
-   * @returns 复制的实体对象（失败返回`null`）
+   * @returns 复制的实体对象（失败返回`undefined`）
    */
-  function cloneMob(entity: Entity, pos: IntPos | FloatPos): Entity | null
+  function cloneMob(entity: Entity, pos: IntPos | FloatPos): Entity | undefined
 
   /**
    * ##d 复制生物并获取
@@ -60,7 +60,7 @@ declare namespace mc {
    * @param z z坐标
    * @param dimId 维度Id
    *
-   * @returns Entity|null 复制的实体对象（失败返回`null`）
+   * @returns Entity|undefined 复制的实体对象（失败返回`undefined`）
    */
   function cloneMob(
     entity: Entity,
@@ -68,7 +68,7 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-  ): Entity | null
+  ): Entity | undefined
 
   /**
    * ### 在指定位置制造一次爆炸
@@ -84,7 +84,7 @@ declare namespace mc {
    */
   function explode(
     pos: IntPos | FloatPos,
-    source: Entity,
+    source: Entity | null | undefined,
     power: number,
     range: number,
     isDestroy: boolean,
@@ -111,7 +111,7 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-    source: Entity,
+    source: Entity | null | undefined,
     power: number,
     range: number,
     isDestroy: boolean,

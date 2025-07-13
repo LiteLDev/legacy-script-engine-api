@@ -4,7 +4,7 @@
  * @see https://github.com/LiteLDev/LiteLoaderBDS/blob/main/ScriptEngine/API/BaseAPI.cpp#L12
  * @see https://github.com/LiteLDev/LiteLoaderBDS/blob/main/LiteLoader/Header/MC/ActorDamageSource.hpp#L14
  */
-declare enum DamageCause {
+declare const enum DamageCause {
   ActorDamageCause_None = -0x01,
   ActorDamageCause_Override = 0x00,
   ActorDamageCause_Contact = 0x01,

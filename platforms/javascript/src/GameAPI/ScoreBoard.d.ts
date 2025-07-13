@@ -53,7 +53,7 @@ declare class Objective {
    */
   setDisplay(
     slot: 'sidebar' | 'belowname' | 'list',
-    sortOrder?: number | sidebar,
+    sortOrder?: number | SidebarSortOrder,
   ): boolean
 }
 

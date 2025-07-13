@@ -1,5 +1,5 @@
 /// <reference path="../index.d.ts" />
-declare enum sendTextType {
+declare const enum TextMessageType {
   raw = 0,
   chat = 1,
   popup = 4,
@@ -199,7 +199,7 @@ declare class Player {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  tell(msg: string, type?: sendTextType | number): boolean
+  tell(msg: string, type?: TextMessageType | number): boolean
 
   /**
    * 发送一个文本消息给玩家
@@ -207,7 +207,7 @@ declare class Player {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  sendText(msg: string, type?: sendTextType | number): boolean
+  sendText(msg: string, type?: TextMessageType | number): boolean
 
   /**
    * 断开玩家连接
@@ -551,7 +551,7 @@ declare class Player {
   setSidebar(
     title: string,
     data: Record<string, number>,
-    sortOrder?: sidebar | 0 | 1,
+    sortOrder?: SidebarSortOrder | 0 | 1,
   ): boolean
 
   /**
@@ -961,7 +961,7 @@ declare namespace mc {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  function broadcast(msg: string, type?: sendTextType | number): boolean
+  function broadcast(msg: string, type?: TextMessageType | number): boolean
 
   /**
    * 修改玩家的重生坐标
@@ -1053,7 +1053,7 @@ declare namespace mc {
   function deletePlayerNbt(uuid: string): boolean
 }
 
-declare enum sidebar {
+declare const enum SidebarSortOrder {
   /** 降序 */
   Descending = 1,
   /** 升序 */

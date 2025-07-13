@@ -13,6 +13,7 @@ declare namespace ll {
    * @param introduction 对插件的简短介绍
    * @param version 插件的版本信息[2,0,1]
    * @param otherInformation 其他你愿意提供的的附加信息（如许可证、开源地址等）
+   * @deprecated 请在 manifest.json 中注册插件信息
    */
   function registerPlugin(
     name: string,

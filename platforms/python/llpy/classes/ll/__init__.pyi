@@ -228,6 +228,8 @@ class ll:
         """
         注册插件
 
+        .. deprecated:: 请在 manifest.json 中注册插件信息
+
         Args:
             name: 插件名字
             introduction: 对插件的简短介绍

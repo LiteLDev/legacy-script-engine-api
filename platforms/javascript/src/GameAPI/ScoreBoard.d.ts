@@ -18,25 +18,25 @@ declare class Objective {
    * 修改某个目标的分数
    * @param target 计分项跟踪的目标，可传入玩家对象或者任意字符串
    * @param score 要设置的分数
-   * @returns number|null 该目标在经过设置操作后的分数
+   * @returns number|undefined 该目标在经过设置操作后的分数
    */
-  setScore(target: Player | string, score: number): number | null
+  setScore(target: Player | string, score: number): number | undefined
 
   /**
    * 修改某个目标的分数
    * @param target 计分项跟踪的目标，可传入玩家对象或者任意字符串
    * @param score 要增加的分数
-   * @returns number|null 该目标在经过增加操作后的分数
+   * @returns number|undefined 该目标在经过增加操作后的分数
    */
-  addScore(target: Player | string, score: number): number | null
+  addScore(target: Player | string, score: number): number | undefined
 
   /**
    * 修改某个目标的分数
    * @param target 计分项跟踪的目标，可传入玩家对象或者任意字符串
    * @param score 要减少的分数
-   * @returns number|null 该目标在经过减少操作后的分数
+   * @returns number|undefined 该目标在经过减少操作后的分数
    */
-  reduceScore(target: Player | string, score: number): number | null
+  reduceScore(target: Player | string, score: number): number | undefined
 
   /**
    * 停止跟踪某个目标
@@ -53,7 +53,7 @@ declare class Objective {
    */
   setDisplay(
     slot: 'sidebar' | 'belowname' | 'list',
-    sortOrder?: number | sidebar,
+    sortOrder?: number | SidebarSortOrder,
   ): boolean
 }
 
@@ -62,16 +62,16 @@ declare namespace mc {
    * 创建一个新的计分项
    * @param name 计分项名称
    * @param displayName 计分项显示名称
-   * @returns Objective|null 新增创建的计分项对象
+   * @returns Objective|undefined 新增创建的计分项对象
    */
-  function newScoreObjective(name: string, displayName: string): Objective | null
+  function newScoreObjective(name: string, displayName: string): Objective | undefined
 
   /**
    * 获取某个已存在的计分项
    * @param name 要获取的计分项名称
-   * @returns Objective|null 对应的计分项对象
+   * @returns Objective|undefined 对应的计分项对象
    */
-  function getScoreObjective(name: string): Objective | null
+  function getScoreObjective(name: string): Objective | undefined
 
   /**
    * 获取所有计分项
@@ -82,9 +82,9 @@ declare namespace mc {
   /**
    * 获取某个处于显示状态的计分项
    * @param slot 待查询的显示槽位名称，可以为`"sidebar"`/`"belowname"`/`"list"`
-   * @returns Objective|null 正在`slot`槽位显示的计分项
+   * @returns Objective|undefined 正在`slot`槽位显示的计分项
    */
-  function getDisplayObjective(slot: 'sidbar' | 'belowname' | 'list'): Objective | null
+  function getDisplayObjective(slot: 'sidbar' | 'belowname' | 'list'): Objective | undefined
 
   /**
    * 移除一个已存在的计分项

@@ -3,16 +3,16 @@ declare namespace data {
    * 变量转换为Json字符串
    * @param _var 要转换为Json字符串的变量
    * @param space （可选参数）如果要格式化输出的字符串
-   * @returns string|null 转换成的Json字符串
+   * @returns string|undefined 转换成的Json字符串
    */
-  function toJson(_var: any, space: number): string | null
+  function toJson(_var: any, space: number): string | undefined
 
   /**
    * Json字符串解析为变量
    * @param json 要转换为变量的Json字符串
-   * @returns any|null 转换成的变量
+   * @returns any|undefined 转换成的变量
    */
-  function parseJson(json: string): any | null
+  function parseJson(json: string): any | undefined
 
   /**
    * MD5计算

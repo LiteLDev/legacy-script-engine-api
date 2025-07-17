@@ -1,5 +1,7 @@
 from typing import Any, Callable, NoReturn, overload
 
+from typing_extensions import deprecated
+
 from .types import T_PluginInfo, T_VersionStatus
 
 class ll:
@@ -218,6 +220,7 @@ class ll:
         Returns:
             执行结果
         """
+    @deprecated("请在 manifest.json 中注册插件信息")
     @staticmethod
     def registerPlugin(
         name: str,

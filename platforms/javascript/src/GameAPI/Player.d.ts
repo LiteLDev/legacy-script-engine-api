@@ -1,5 +1,5 @@
 /// <reference path="../index.d.ts" />
-declare enum sendTextType {
+declare const enum TextMessageType {
   raw = 0,
   chat = 1,
   popup = 4,
@@ -199,7 +199,7 @@ declare class Player {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  tell(msg: string, type?: sendTextType | number): boolean
+  tell(msg: string, type?: TextMessageType | number): boolean
 
   /**
    * 发送一个文本消息给玩家
@@ -207,7 +207,7 @@ declare class Player {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  sendText(msg: string, type?: sendTextType | number): boolean
+  sendText(msg: string, type?: TextMessageType | number): boolean
 
   /**
    * 断开玩家连接
@@ -551,7 +551,7 @@ declare class Player {
   setSidebar(
     title: string,
     data: Record<string, number>,
-    sortOrder?: sidebar | 0 | 1,
+    sortOrder?: SidebarSortOrder | 0 | 1,
   ): boolean
 
   /**
@@ -708,9 +708,9 @@ declare class Player {
   /**
    * 获取视线方向实体
    * @param maxDistance 查找最大距离
-   * @returns Entity|null 视线方向实体，如果获取失败，返回 Null
+   * @returns Entity|undefined 视线方向实体，如果获取失败，返回 Null
    */
-  getEntityFromViewVector(maxDistance?: number): Entity | null
+  getEntityFromViewVector(maxDistance?: number): Entity | undefined
 
   /**
    * 获取视线方向方块
@@ -718,20 +718,20 @@ declare class Player {
    * @param solidOnly 是否仅允许 Solid 类型的方块
    * @param maxDistance 查找最大距离
    * @param fullOnly 是否仅允许完整方块
-   * @returns Block|null 视线方向方块，如果获取失败，返回 Null
+   * @returns Block|undefined 视线方向方块，如果获取失败，返回 Null
    */
   getBlockFromViewVector(
     includeLiquid?: boolean,
     solidOnly?: boolean,
     maxDistance?: number,
     fullOnly?: boolean,
-  ): Block | null
+  ): Block | undefined
 
   /**
    * 向玩家发送数据包
    * @param packet 数据包
    */
-  sendPacket(packet: Packet): boolean | null
+  sendPacket(packet: Packet): boolean | undefined
 
   /**
    * 获取玩家所在群系ID
@@ -770,9 +770,9 @@ declare class Player {
   /**
    * 获取玩家绑定数据
    * @param name 要读取的绑定数据的名字
-   * @returns any|null 储存的绑定数据
+   * @returns any|undefined 储存的绑定数据
    */
-  getExtraData(name: string): any | null
+  getExtraData(name: string): any | undefined
 
   /**
    * 删除玩家绑定数据
@@ -826,15 +826,15 @@ declare class Player {
    * @param confirmButton 按钮1文本的字符串
    * @param cancelButton 按钮2文本的字符串
    * @param callback 玩家点击按钮之后被调用的回调函数。
-   * @returns number|null 发送的表单ID
+   * @returns number|undefined 发送的表单ID
    */
   sendModalForm(
     title: string,
     content: string,
     confirmButton: string,
     cancelButton: string,
-    callback: (player: Player, result: boolean | null) => void,
-  ): number | null
+    callback: (player: Player, result: boolean | undefined) => void,
+  ): number | undefined
 
   /**
    * 向玩家发送普通表单
@@ -849,8 +849,8 @@ declare class Player {
     content: string,
     buttons: string[],
     images: string[],
-    callback: (player: Player, id: number | null) => void,
-  ): number | null
+    callback: (player: Player, id: number | undefined) => void,
+  ): number | undefined
 
   /**
    * 向玩家发送自定义表单（Json格式）
@@ -859,8 +859,8 @@ declare class Player {
    */
   sendCustomForm(
     json: string,
-    callback: (player: Player, data: any[] | null) => void,
-  ): number | null
+    callback: (player: Player, data: any[] | undefined) => void,
+  ): number | undefined
 
   /**
    * 发送 SimpleForm 表单
@@ -870,7 +870,7 @@ declare class Player {
   sendForm(
     fm: SimpleForm,
     callback: (player: Player, id: number | undefined) => void,
-  ): number | null
+  ): number | undefined
 
   /**
    * 发送 CustomForm 表单
@@ -880,7 +880,7 @@ declare class Player {
   sendForm(
     fm: CustomForm,
     callback: (player: Player, data: (undefined | string | number | boolean)[] | undefined) => void,
-  ): number | null
+  ): number | undefined
 
   /**
    * 函数已弃用
@@ -961,7 +961,7 @@ declare namespace mc {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  function broadcast(msg: string, type?: sendTextType | number): boolean
+  function broadcast(msg: string, type?: TextMessageType | number): boolean
 
   /**
    * 修改玩家的重生坐标
@@ -988,7 +988,7 @@ declare namespace mc {
    * @param pos 生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）
    * @returns SimulatedPlayer 模拟玩家对象
    */
-  function spawnSimulatedPlayer(name: string, pos: IntPos): SimulatedPlayer | null
+  function spawnSimulatedPlayer(name: string, pos: IntPos): SimulatedPlayer | undefined
 
   /**
    *
@@ -1004,7 +1004,7 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-  ): SimulatedPlayer | null
+  ): SimulatedPlayer | undefined
 
   /**
    * 从现有玩家获取
@@ -1053,7 +1053,7 @@ declare namespace mc {
   function deletePlayerNbt(uuid: string): boolean
 }
 
-declare enum sidebar {
+declare const enum SidebarSortOrder {
   /** 降序 */
   Descending = 1,
   /** 升序 */

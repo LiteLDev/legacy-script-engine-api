@@ -16,9 +16,9 @@ declare class KVDatabase {
   /**
    * 读取数据项
    * @param name 数据项名字
-   * @returns any|null 数据库中储存的这个项的数据
+   * @returns any|undefined 数据库中储存的这个项的数据
    */
-  get(name: string): any | null
+  get(name: string): any | undefined
 
   /**
    * 删除数据项

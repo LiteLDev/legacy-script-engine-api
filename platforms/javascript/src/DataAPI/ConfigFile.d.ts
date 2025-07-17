@@ -31,10 +31,10 @@ declare class JsonConfigFile {
   /**
    * 读取配置项
    * @param name 配置项名字
-   * @param _default （可选参数）当读取失败时返回的默认值  默认为`null`
+   * @param _default （可选参数）当读取失败时返回的默认值  默认为`undefined`
    * @returns any 指定配置项的数据
    */
-  get(name: string, _default?: any | null): any
+  get(name: string, _default?: any | undefined): any
 
   /**
    * 删除配置项

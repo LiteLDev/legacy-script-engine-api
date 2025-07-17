@@ -86,10 +86,10 @@ declare enum ParamType {
   /** `string`  - 指令名称参数（仅供测试） */
   Command,
 
-  /** `null` - WildcardCommandSelector\<Actor\> */
+  /** `undefined` - WildcardCommandSelector\<Actor\> */
   WildcardSelector,
 
-  /** `null` */
+  /** `undefined` */
   BlockState,
 }
 

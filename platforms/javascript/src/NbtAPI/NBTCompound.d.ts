@@ -39,9 +39,9 @@ declare class NbtCompound {
   /**
    * 读取键对应的 NBT 对象
    * @param key 要操作的键名
-   * @returns NbtObject|Null 键对应的NBT对象
+   * @returns NbtObject|undefined 键对应的NBT对象
    */
-  getTag(key: string): NbtType | null
+  getTag(key: string): NbtType | undefined
 
   /**
    * 删除键对应的 NBT 对象
@@ -124,9 +124,9 @@ declare class NbtCompound {
   /**
    * 读取键对应的值的具体数据
    * @param key 要操作的键名
-   * @returns Any|NbtList|NbtCompound|null 键对应的值的具体数据
+   * @returns Any|NbtList|NbtCompound|undefined 键对应的值的具体数据
    */
-  getData(key: string): any | NbtList | NbtCompound | null
+  getData(key: string): any | NbtList | NbtCompound | undefined
 
   /**
    * 将 NBT 标签对象 转换为Object

@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.base",
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "compilerOptions": {
     "rootDir": "src",
-    "noEmit": true
-  }
+    "noEmit": true,
+    "lib": [
+      "ES2020"
+    ],
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": false,
+  },
 }

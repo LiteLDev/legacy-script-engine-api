@@ -39,9 +39,9 @@ declare class NbtList {
   /**
    * 读取某个下标位置的NBT对象
    * @param index 要操作的目标下标
-   * @returns NbtType|null NBT对象
+   * @returns NbtType|undefined NBT对象
    */
-  getTag(index: number): NbtType | null
+  getTag(index: number): NbtType | undefined
 
   /**
    * 往列表末尾追加一个NBT对象
@@ -131,9 +131,9 @@ declare class NbtList {
   /**
    * 读取某个下标位置的具体数据
    * @param index 要操作的目标下标
-   * @returns Any|NbtList|NbtCompound|null 键对应的值的具体数据
+   * @returns Any|NbtList|NbtCompound|undefined 键对应的值的具体数据
    */
-  getData(index: number): any | NbtList | NbtCompound | null
+  getData(index: number): any | NbtList | NbtCompound | undefined
 
   /**
    * 将List类型转换为Array

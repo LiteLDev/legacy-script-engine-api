@@ -952,6 +952,24 @@ declare class Player {
    * @returns 是否成功
    */
   removeEffect(id: number): boolean
+
+  /**
+   * 修改玩家的重生坐标
+   * @param pos 重生坐标（或者使用x, y, z, dimid来确定重生位置）
+   * @returns boolean 是否成功修改
+   */
+  setRespawnPosition(pos: IntPos): boolean
+
+  /**
+   * 修改玩家的重生坐标
+   * @returns boolean 是否成功修改
+   */
+  setRespawnPosition(
+    x: number,
+    y: number,
+    z: number,
+    dimId: 0 | 1 | 2,
+  ): boolean
 }
 
 declare namespace mc {
@@ -962,25 +980,6 @@ declare namespace mc {
    * @returns boolean 是否成功发送
    */
   function broadcast(msg: string, type?: TextMessageType | number): boolean
-
-  /**
-   * 修改玩家的重生坐标
-   * @param pos 重生坐标（或者使用x, y, z, dimid来确定重生位置）
-   * @returns boolean 是否成功修改
-   */
-  function setRespawnPosition(pos: IntPos): boolean
-
-  /**
-   * 修改玩家的重生坐标
-   * @param pos 重生坐标（或者使用x, y, z, dimid来确定重生位置）
-   * @returns boolean 是否成功修改
-   */
-  function setRespawnPosition(
-    x: number,
-    y: number,
-    z: number,
-    dimId: 0 | 1 | 2,
-  ): boolean
 
   /**
    * 创建一个模拟玩家

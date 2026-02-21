@@ -19,7 +19,7 @@ declare namespace mc {
   /** 玩家死亡 */
   function listen(
     event: 'onPlayerDie',
-    listener: (player: Player, source: Entity | null) => void,
+    listener: (player: Player, source: Entity | undefined) => void,
   ): boolean
 
   /** 玩家执行命令 */

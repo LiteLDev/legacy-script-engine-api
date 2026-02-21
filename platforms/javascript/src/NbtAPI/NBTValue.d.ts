@@ -23,7 +23,7 @@ declare class NbtEnd {
    * 读取对象的数据
    * @returns 对象中储存的数据
    */
-  get(): null
+  get(): undefined
 }
 
 declare class NbtByte {

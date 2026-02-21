@@ -231,11 +231,11 @@ declare class Entity {
    * ### 将实体对象转换玩家对象
    *
    * 如果当前实体对象指向的是一个玩家，可以使用此函数将实体对象转换为玩家对象，以使用更多的玩家相关 API\
-   * 如果此实体对象指向的不是某个玩家，或者转换失败，则返回 `null`
+   * 如果此实体对象指向的不是某个玩家，或者转换失败，则返回 `undefined`
    *
-   * @returns 转换成的玩家对象，失败返回`null`
+   * @returns 转换成的玩家对象，失败返回`undefined`
    */
-  toPlayer(): Player | null
+  toPlayer(): Player | undefined
 
   /**
    * ### 判断一个实体对象是不是掉落物实体
@@ -248,11 +248,11 @@ declare class Entity {
    * ### 获取掉落物实体中的物品对象
    *
    * 如果当前实体对象是一个掉落物实体，可以使用此函数获取掉落物实体中的物品对象，以使用更多的物品相关 API\
-   * 如果此实体对象不是掉落物实体，或者获取失败，则返回 `null`
+   * 如果此实体对象不是掉落物实体，或者获取失败，则返回 `undefined`
    *
-   * @returns 获取到的物品对象，失败返回`null`
+   * @returns 获取到的物品对象，失败返回`undefined`
    */
-  toItem(): Item | null
+  toItem(): Item | undefined
 
   /**
    * ### 获取实体当前站立所在的方块
@@ -353,16 +353,16 @@ declare class Entity {
    * @deprecated
    * @alias {@linkcode setNbt()}
    */
-  setTag(nbt: NbtCompound): boolean | null
+  setTag(nbt: NbtCompound): boolean | undefined
 
   /**
    * ### 获取视线方向实体
    *
    * @param maxDistance 查找最大距离
    *
-   * @returns 视线方向实体，如果获取失败，返回 `null`
+   * @returns 视线方向实体，如果获取失败，返回 `undefined`
    */
-  getEntityFromViewVector(maxDistance?: number): Entity | null
+  getEntityFromViewVector(maxDistance?: number): Entity | undefined
 
   /**
    * ### 获取视线方向方块
@@ -372,14 +372,14 @@ declare class Entity {
    * @param maxDistance 查找最大距离
    * @param fullOnly 是否仅允许完整方块
    *
-   * @returns 视线方向方块，如果获取失败，返回 `null`
+   * @returns 视线方向方块，如果获取失败，返回 `undefined`
    */
   getBlockFromViewVector(
     includeLiquid?: boolean,
     solidOnly?: boolean,
     maxDistance?: number,
     fullOnly?: boolean,
-  ): Block | null
+  ): Block | undefined
 
   /**
    * ### 快速执行Molang表达式
@@ -392,7 +392,7 @@ declare class Entity {
    */
   quickEvalMolangScript(str: string): number
 
-  asPointer(): NativePointer | null
+  asPointer(): NativePointer | undefined
 
   /**
    * ### 缩放实体

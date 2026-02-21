@@ -12,7 +12,7 @@ declare namespace mc {
    *
    * @returns 方块对象
    */
-  function getBlock(pos: IntPos): Block | null
+  function getBlock(pos: IntPos): Block | undefined
 
   /**
    * ### 通过方块坐标获取Block
@@ -28,7 +28,7 @@ declare namespace mc {
    *
    * @returns 方块对象
    */
-  function getBlock(x: number, y: number, z: number, dimId: 0 | 1 | 2): Block | null
+  function getBlock(x: number, y: number, z: number, dimId: 0 | 1 | 2): Block | undefined
 
   /**
    * ### 设置指定位置的方块

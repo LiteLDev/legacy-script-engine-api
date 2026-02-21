@@ -13,6 +13,7 @@ declare namespace ll {
    * @param introduction 对插件的简短介绍
    * @param version 插件的版本信息[2,0,1]
    * @param otherInformation 其他你愿意提供的的附加信息（如许可证、开源地址等）
+   * @deprecated 请在 manifest.json 中注册插件信息
    */
   function registerPlugin(
     name: string,
@@ -45,21 +46,21 @@ declare function fastLog(...data: any[]): void
  * 推迟一段时间执行代码
  * @param func 待执行的函数或待执行的代码段
  * @param msec 推迟执行的时间（毫秒）
- * @returns Integer|null 此任务ID
+ * @returns Integer|undefined 此任务ID
  */
-declare function setTimeout(func: () => void | string, msec: number): number | null
+declare function setTimeout(func: () => void | string, msec: number): number | undefined
 
 /**
  * 设置周期执行代码
  * @param func 待执行的函数或待执行的代码段
  * @param msec 执行间隔周期（毫秒）
- * @returns Integer|null 此任务ID
+ * @returns Integer|undefined 此任务ID
  */
-declare function setInterval(func: () => void | string, msec: number): number | null
+declare function setInterval(func: () => void | string, msec: number): number | undefined
 
 /**
  * 取消延时 / 周期执行项
  * @param taskid 由前几个函数返回的任务ID
  * @returns boolean 是否取消成功
  */
-declare function clearInterval(taskid: number): boolean | null
+declare function clearInterval(taskid: number): boolean | undefined

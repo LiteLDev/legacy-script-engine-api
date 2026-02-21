@@ -32,7 +32,7 @@ declare class file {
    * @param path 目标文件的路径，相对路径以BDS根目录为基准
    * @returns string 文件的所有数据
    */
-  static readFrom(path: string): string | null
+  static readFrom(path: string): string | undefined
 
   /**
    * 向指定文件写入内容
@@ -55,19 +55,19 @@ declare class file {
    * @param cnt 要读取的字符数 / 字节数
    * @returns string|ByteBuffer 读取的字符串内容 / 二进制数据
    */
-  readSync(cnt: number): string | ByteBuffer | null
+  readSync(cnt: number): string | ByteBuffer | undefined
 
   /**
    * 从文件读取一行文本
-   * @returns string|null 读取的字符串内容
+   * @returns string|undefined 读取的字符串内容
    */
-  readLineSync(): string | null
+  readLineSync(): string | undefined
 
   /**
    * 从文件读取所有内容
    * @returns string|ByteBuffer 读取的字符串内容 / 二进制数据
    */
-  readAllSync(): string | ByteBuffer | null
+  readAllSync(): string | ByteBuffer | undefined
 
   /**
    * 写入文本 / 二进制数据到文件
@@ -89,7 +89,7 @@ declare class file {
    * @param callback 获取结果的回调函数
    * @returns boolean 是否成功发送请求
    */
-  read(cnt: number, callback: (result: string | ByteBuffer | null) => void): boolean
+  read(cnt: number, callback: (result: string | ByteBuffer | undefined) => void): boolean
 
   /**
    * 从文件读取一行文本（异步）
@@ -103,7 +103,7 @@ declare class file {
    * @param callback 获取结果的回调函数
    * @returns boolean 是否成功发送请求
    */
-  readAll(callback: (result: string | ByteBuffer | null) => void): boolean
+  readAll(callback: (result: string | ByteBuffer | undefined) => void): boolean
 
   /**
    * 写入文本 / 二进制数据到文件（异步）

@@ -78,9 +78,9 @@ declare class Item {
 
   /**
    * 从现有的物品对象克隆
-   * @returns Item|null 生成的新物品对象
+   * @returns Item|undefined 生成的新物品对象
    */
-  clone(): Item | null
+  clone(): Item | undefined
 
   /**
    * 判断物品对象是否为空
@@ -148,9 +148,9 @@ declare namespace mc {
    * 根据物品对象生成掉落物实体
    * @param item 生成掉落物实体所使用的物品对象
    * @param pos 生成掉落物实体的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）
-   * @returns Entity|null 生成的掉落物实体对象
+   * @returns Entity|undefined 生成的掉落物实体对象
    */
-  function spawnItem(item: Item, pos: IntPos | FloatPos): Entity | null
+  function spawnItem(item: Item, pos: IntPos | FloatPos): Entity | undefined
 
   /**
    * 根据物品对象生成掉落物实体
@@ -159,7 +159,7 @@ declare namespace mc {
    * @param y y坐标
    * @param z z坐标
    * @param dimId 维度Id
-   * @returns Entity|null 生成的掉落物实体对象
+   * @returns Entity|undefined 生成的掉落物实体对象
    */
   function spawnItem(
     item: Item,
@@ -167,21 +167,21 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-  ): Entity | null
+  ): Entity | undefined
 
   /**
    * 通过NBT生成物品对象
    * @param nbt 生成物品对象所使用的物品NBT
-   * @returns Item|null 生成的物品对象
+   * @returns Item|undefined 生成的物品对象
    */
-  function newItem(nbt: NbtCompound): Item | null
+  function newItem(nbt: NbtCompound): Item | undefined
 
   /**
    * 生成新的物品对象
    * @param name 物品的标准类型名，如`minecraft:bread`
    * @param count 物品堆叠数量
    */
-  function newItem(name: string, count: number): Item | null
+  function newItem(name: string, count: number): Item | undefined
 }
 
 declare class LLSE_Item extends Item {}

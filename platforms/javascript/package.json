@@ -1,6 +1,6 @@
 {
   "name": "@levimc-lse/types",
-  "version": "2.18.2",
+  "version": "2.18.3",
   "description": "TypeScript declaration files for the Legacy Script Engine.",
   "types": "src/index.d.ts",
   "files": [
@@ -8,7 +8,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "deploy": "yarn publish --access=public --provenance",
+    "deploy": "npm publish --access=public --provenance",
     "test": "tsc"
   },
   "keywords": [

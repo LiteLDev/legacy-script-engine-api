@@ -6,22 +6,25 @@ on:
       - 'JavaScript/v*'
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
+
       - name: Install dependencies
-        run: yarn
+        run: npm ci
         working-directory: platforms/javascript
-      - name: Publish
-        run: yarn deploy
+
+      - name: Pun deploy script
+        run: npm run deploy
         working-directory: platforms/javascript
         env:
           NPM_CONFIG_PROVENANCE: true

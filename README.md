@@ -21,7 +21,7 @@ Here are the scaffolding tools available in the community that assist in the dev
 
 ## 📚 Documentation
 
-You can find the Legacy Script Engine Plugin Development documentation [on the website](https://lse.levimc.org/).
+You can find the Legacy Script Engine Plugin Development documentation [on the website](https://docs.levimc.org/LegacyScriptEngine/).
 
 ## 🤝 Contribute
 

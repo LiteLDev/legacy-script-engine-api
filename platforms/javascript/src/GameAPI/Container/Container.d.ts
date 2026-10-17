@@ -15,7 +15,7 @@
  *
  * 该类**没有构造函数**，请通过事件或API获取
  *
- * @see [👜 容器对象 API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Container)
+ * @see [👜 容器对象 API](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Container/)
  */
 declare class Container {
   /** 容器拥有的格子总数 */

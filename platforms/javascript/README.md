@@ -1,6 +1,6 @@
 # Legacy Script Engine Types
 
-> For other language platforms and documentation, please refer to the [homepage](https://github.com/LiteLDev/LegacyScriptEngine_API).
+> For other language platforms and documentation, please refer to the [homepage](https://github.com/LiteLDev/legacy-script-engine-api).
 
 TypeScript declaration files for the Legacy Script Engine.
 

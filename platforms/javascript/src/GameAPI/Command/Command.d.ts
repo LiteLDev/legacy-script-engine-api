@@ -10,7 +10,7 @@
  *
  * 该类**没有构造函数**，请使用{@linkcode mc.newCommand()}创建
  *
- * @see [🎯 命令注册API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Command)
+ * @see [🎯 命令注册API](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Command/)
  */
 declare class Command {
   readonly name: string

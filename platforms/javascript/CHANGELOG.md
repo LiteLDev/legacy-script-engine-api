@@ -1,4 +1,4 @@
-# [2.18.0](https://github.com/LiteLDev/legacy-script-engine-api/compare/v2.14.1...v2.18.0) (2026-02-21)
+# [2.18.0](https://github.com/LiteLDev/legacy-script-engine-api/compare/v2.14.1...JavaScript/v2.18.0) (2026-02-21)
 
 
 ### Bug Fixes

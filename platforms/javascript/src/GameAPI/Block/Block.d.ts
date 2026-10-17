@@ -11,7 +11,7 @@
  * 当方块对象对应的方块被销毁时，对应的方块对象将变得无效。\
  * 因此，如果有长期操作某个方块的需要，请通过**事件提供的参数**或者**使用**{@linkcode mc.getBlock()}获取实时的方块对象
  *
- * @see [📦 方块对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Block)
+ * @see [📦 方块对象](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Block/)
  */
 declare class Block {
   /** 游戏内显示的方块名称（例：`Stone`） */
@@ -88,7 +88,7 @@ declare class Block {
   /**
    * ### 获取方块对应的NBT对象
    *
-   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.litebds.com/#/zh_CN/Development/NbtAPI/NBT)
+   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/NbtAPI/NBT/)
    *
    * @returns 方块的NBT对象
    */
@@ -103,7 +103,7 @@ declare class Block {
   /**
    * ### 写入方块对应的NBT对象
    *
-   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.litebds.com/#/zh_CN/Development/NbtAPI/NBT)
+   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/NbtAPI/NBT/)
    *
    * 注意：慎重使用此api，请考虑使用 {@linkcode mc.setBlock()} 代替
    *
@@ -126,7 +126,7 @@ declare class Block {
    *
    * 等价于脚本执行`block.getNbt().getTag("states").toObject()`
    *
-   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.litebds.com/#/zh_CN/Development/NbtAPI/NBT)
+   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/NbtAPI/NBT/)
    *
    * @returns 方块的BlockState
    */
@@ -137,7 +137,7 @@ declare class Block {
    *
    * 如箱子、桶等容器，他们各自拥有一个属于自己的容器对象
    *
-   * 关于容器对象的更多使用，请参考 [容器对象 API文档](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Container)
+   * 关于容器对象的更多使用，请参考 [容器对象 API文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Container/)
    *
    * @returns 这个方块是否拥有容器
    */
@@ -148,7 +148,7 @@ declare class Block {
    *
    * 如箱子、桶等容器，他们各自拥有一个属于自己的容器对象
    *
-   * 关于容器对象的更多使用，请参考 [容器对象 API文档](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Container)
+   * 关于容器对象的更多使用，请参考 [容器对象 API文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Container/)
    *
    * @returns 这个方块所拥有的容器对象
    */
@@ -157,7 +157,7 @@ declare class Block {
   /**
    * ### 判断方块是否拥有方块实体
    *
-   * 关于方块实体对象的更多使用，请参考 [方块实体对象 API文档](https://docs.litebds.com/#/zh_CN/Development/GameAPI/BlockEntity)
+   * 关于方块实体对象的更多使用，请参考 [方块实体对象 API文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/BlockEntity/)
    *
    * @returns 这个方块是否拥有方块实体
    */
@@ -166,7 +166,7 @@ declare class Block {
   /**
    * ### 获取方块所拥有的方块实体
    *
-   * 关于方块实体对象的更多使用，请参考 [方块实体对象 API文档](https://docs.litebds.com/#/zh_CN/Development/GameAPI/BlockEntity)
+   * 关于方块实体对象的更多使用，请参考 [方块实体对象 API文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/BlockEntity/)
    *
    * @returns 这个方块所拥有的方块实体
    */
@@ -175,7 +175,7 @@ declare class Block {
   /**
    * ### 删除方块所拥有的方块实体
    *
-   * 关于方块实体对象的更多使用，请参考 [方块实体对象 API文档](https://docs.litebds.com/#/zh_CN/Development/GameAPI/BlockEntity)
+   * 关于方块实体对象的更多使用，请参考 [方块实体对象 API文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/BlockEntity/)
    *
    * @returns 是否成功删除
    */

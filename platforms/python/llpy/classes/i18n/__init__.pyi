@@ -11,7 +11,7 @@ class i18n:
         """
         使用默认语言翻译文本并格式化
 
-        注意：格式化应遵循 [语法](https://fmt.dev/latest/syntax.html)
+        注意：格式化应遵循 [语法](https://fmt.dev/latest/syntax/)
 
         Args:
             key: 文本或 ID
@@ -28,7 +28,7 @@ class i18n:
         """
         使用指定语言翻译文本并格式化
 
-        注意：格式化应遵循 [语法](https://fmt.dev/latest/syntax.html)
+        注意：格式化应遵循 [语法](https://fmt.dev/latest/syntax/)
 
         Args:
             locale_name: 目标语言

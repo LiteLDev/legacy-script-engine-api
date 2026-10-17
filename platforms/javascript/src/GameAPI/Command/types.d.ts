@@ -5,7 +5,7 @@
  *
  * @see [注册一条顶层命令](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Command/#%e6%b3%a8%e5%86%8c%e4%b8%80%e6%9d%a1%e9%a1%b6%e5%b1%82%e5%91%bd%e4%bb%a4)
  * @see {@linkcode mc.newCommand()}
- * @see https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/LiteLoader/Header/MC/Command.hpp#L17
+ * @see [https://github.com/LiteLDev/LiteLoaderBDS/blob/main/LiteLoader/Header/MC/Command.hpp#L17](https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/LiteLoader/Header/MC/Command.hpp#L17)
  */
 declare enum PermType {
   /** 任何人都可以执行这条指令 */
@@ -98,7 +98,7 @@ declare enum ParamType {
  *
  * @see [参数 origin ：命令的执行者](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Command/#%e5%8f%82%e6%95%b0-origin-%e5%91%bd%e4%bb%a4%e7%9a%84%e6%89%a7%e8%a1%8c%e8%80%85)
  * @see {@linkcode CommandOrigin.type}
- * @see https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/LiteLoader/Header/MC/Command.hpp#L26
+ * @see [https://github.com/LiteLDev/LiteLoaderBDS/blob/main/LiteLoader/Header/MC/Command.hpp#L22](https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/LiteLoader/Header/MC/Command.hpp#L26)
  */
 declare enum OriginType {
   Player = 0,
@@ -122,8 +122,8 @@ declare enum OriginType {
 }
 
 /**
- * @see https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/ScriptEngine/API/CommandAPI.cpp#L32
- * @see https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/LiteLoader/Header/MC/CommandParameterData.hpp#L29
+ * @see [https://github.com/LiteLDev/LiteLoaderBDS/blob/main/ScriptEngine/API/CommandAPI.cpp#L32](https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/ScriptEngine/API/CommandAPI.cpp#L32)
+ * @see [https://github.com/LiteLDev/LiteLoaderBDS/blob/main/LiteLoader/Header/MC/CommandParameterData.hpp#L29](https://github.com/LiteLDev/LiteLoaderBDS/blob/2.6.2/LiteLoader/Header/MC/CommandParameterData.hpp#L29)
  */
 declare enum ParamOption {
   None = 0,

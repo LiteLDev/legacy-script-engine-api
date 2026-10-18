@@ -17,7 +17,7 @@
  * 当实体对象对应的实体被销毁时，对应的实体对象将同时释放。\
  * 因此，如果有长期操作某个实体的需要，请通过上述途径获取实时的实体对象
  *
- * @see [🎈 实体对象 API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Entity)
+ * @see [🎈 实体对象 API](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Entity/)
  */
 declare class Entity {
   /** 实体名称 */

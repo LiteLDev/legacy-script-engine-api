@@ -6,7 +6,7 @@
  * 引擎采用 `DirectionAngle` 对象来标示一个欧拉角，称之为「方向角对象」\
  * 它的两个成员均为浮点数，多用来表示实体的朝向等方向数据
  *
- * @see [📐 方向角对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Basic?id=%f0%9f%93%90-%e6%96%b9%e5%90%91%e8%a7%92%e5%af%b9%e8%b1%a1)
+ * @see [📐 方向角对象](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Basic/#-%e6%96%b9%e5%90%91%e8%a7%92%e5%af%b9%e8%b1%a1)
  */
 declare class DirectionAngle {
   /**

@@ -46,7 +46,7 @@ declare namespace mc {
    * 在 addon 中，也可以使用这里所注册的命令。
    *
    * @see {@linkcode Command}
-   * @see [🎯 命令注册API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Command)
+   * @see [🎯 命令注册API](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Command/)
    *
    * @param cmd 待注册的命令
    * @param description 命令描述文本

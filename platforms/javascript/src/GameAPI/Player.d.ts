@@ -1063,8 +1063,8 @@ declare class LLSE_Player extends Player {}
 
 /**
  * 模拟玩家
- * @see [🏃‍♂️ 玩家对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Player?id=%e6%a8%a1%e6%8b%9f%e7%8e%a9%e5%ae%b6%ef%bc%88%e7%94%b1%e4%ba%8e%e4%b8%8e%e7%8e%a9%e5%ae%b6api%e9%87%8d%e5%90%88%e8%bf%87%e5%a4%9a%ef%bc%8c%e6%9c%aa%e7%94%9f%e6%88%90%e6%96%b0%e7%9a%84%e6%a8%a1%e6%8b%9f%e7%8e%a9%e5%ae%b6%e7%b1%bb%ef%bc%89)
- * @see [mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer)
+ * @see [🏃‍♂️ 玩家对象](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Player/#%e6%a8%a1%e6%8b%9f%e7%8e%a9%e5%ae%b6%e7%94%b1%e4%ba%8e%e4%b8%8e%e7%8e%a9%e5%ae%b6api%e9%87%8d%e5%90%88%e8%bf%87%e5%a4%9a%e6%9c%aa%e7%94%9f%e6%88%90%e6%96%b0%e7%9a%84%e6%a8%a1%e6%8b%9f%e7%8e%a9%e5%ae%b6%e7%b1%bb)
+ * @see [mojang-gametest docs](https://learn.microsoft.com/zh-cn/minecraft/creator/scriptapi/minecraft/server-gametest/simulatedplayer?view=minecraft-bedrock-experimental)
  */
 declare class SimulatedPlayer extends Player {
   /**

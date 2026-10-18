@@ -5,7 +5,7 @@
  * 该类**没有构造函数**，
  * 请通{@linkcode mc.newParticleSpawner()}过获得类对象
  *
- * @see [✨ ParticleSpawner 对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Particle)
+ * @see [✨ ParticleSpawner 对象](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Particle/)
  */
 declare class ParticleSpawner {
   /** 粒子显示半径 */

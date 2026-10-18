@@ -35,7 +35,7 @@ class LLSE_Objective:
 
         注意：若计分项不存在，则会尝试创建计分项，此时会返回 `0` (当 `target` 为 `str` 时) 或 `None` (当 `target` 为 `LLSE_Player` 时)
 
-        原因参见：[#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment-1385047649)
+        原因参见：[#971](https://github.com/LiteLDev/LeviLamina/issues/971#issuecomment-1385047649)
 
         Args:
             target: 计分项跟踪的目标，可传入玩家对象或者任意字符串
@@ -50,7 +50,7 @@ class LLSE_Objective:
 
         注意：若计分项不存在，则会尝试创建计分项，此时会返回 `0` (当 `target` 为 `str` 时) 或 `None` (当 `target` 为 `LLSE_Player` 时)
 
-        原因参见：[#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment-1385047649)
+        原因参见：[#971](https://github.com/LiteLDev/LeviLamina/issues/971#issuecomment-1385047649)
 
         Args:
             target: 计分项跟踪的目标，可传入玩家对象或者任意字符串
@@ -65,7 +65,7 @@ class LLSE_Objective:
 
         注意：若计分项不存在，则会尝试创建计分项，此时会返回 `0` (当 `target` 为 `str` 时) 或 `None` (当 `target` 为 `LLSE_Player` 时)
 
-        原因参见：[#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment-1385047649)
+        原因参见：[#971](https://github.com/LiteLDev/LeviLamina/issues/971#issuecomment-1385047649)
 
         Args:
             target: 计分项跟踪的目标，可传入玩家对象或者任意字符串

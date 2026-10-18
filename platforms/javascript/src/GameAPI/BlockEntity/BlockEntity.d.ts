@@ -26,7 +26,7 @@ declare class BlockEntity {
   /**
    * ### 获取方块实体对应的NBT对象
    *
-   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.litebds.com/#/zh_CN/Development/NbtAPI/NBT)
+   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/NbtAPI/NBT/)
    *
    * @returns 方块实体的NBT对象
    */
@@ -35,7 +35,7 @@ declare class BlockEntity {
   /**
    * ### 写入方块实体对应的NBT对象
    *
-   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.litebds.com/#/zh_CN/Development/NbtAPI/NBT)
+   * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.levimc.org/LegacyScriptEngine/zh/apis/NbtAPI/NBT/)
    *
    * @param nbt NBT对象
    *

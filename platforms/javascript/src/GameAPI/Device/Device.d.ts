@@ -11,7 +11,7 @@
  * 当设备对应的玩家退出游戏时，对应的对象将变得无效。\
  * 因此，如果有长期操作某个对象的需要，请通过上述途径获取实时的设备信息对象
  *
- * @see [📱 设备信息对象 API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Device)
+ * @see [📱 设备信息对象 API](https://docs.levimc.org/LegacyScriptEngine/zh/apis/GameAPI/Device/)
  */
 declare class Device {
   /** 玩家设备的IP地址 */
